@@ -22,9 +22,9 @@ class MainApp extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 100,
+                height: 300,
                 width: double.infinity,
-                color: const Color.fromARGB(255, 171, 4, 171),
+                color: const Color.fromARGB(255, 124, 255, 205),
                 child: const Center(
                   child: Text(
                     'Superficie 1',
@@ -36,19 +36,17 @@ class MainApp extends StatelessWidget {
               Container(
                 height: 100,
                 width: double.infinity,
-                color: const Color.fromARGB(255, 197, 44, 176),
-                child: const Center(
-                  child: Text(
-                    'Superficie 2',
-                    style: TextStyle(color: Colors.white),
-                  ),
+                decoration: BoxDecoration(
+                  color: Color(0xFF1976D2),
+                  borderRadius: BorderRadius.circular(16),
                 ),
+                child: Center(child: Text('Texto')),
               ),
               const SizedBox(height: 8),
               Container(
                 height: 100,
                 width: double.infinity,
-                color: const Color.fromARGB(255, 235, 84, 230),
+                color: const Color.fromARGB(255, 146, 102, 145),
                 child: const Center(
                   child: Text(
                     'Superficie 3',
