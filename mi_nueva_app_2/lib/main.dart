@@ -10,82 +10,114 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Superficies debajo del AppBar',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('TopBar', style: TextStyle(color: Colors.white)),
-          backgroundColor: const Color.fromARGB(255, 73, 0, 97),
-          iconTheme: const IconThemeData(color: Colors.white),
+          title: const Text('Espacios'),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Container(
-                height: 300,
-                width: double.infinity,
-                color: const Color.fromARGB(255, 124, 255, 205),
-                child: const Center(
-                  child: Text(
-                    'Superficie 1',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 8),
-              Container(
-                height: 100,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Color(0xFF1976D2),
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Center(child: Text('Texto')),
-              ),
-              const SizedBox(height: 8),
-              Container(
-                height: 100,
-                width: double.infinity,
-                color: const Color.fromARGB(255, 146, 102, 145),
-                child: const Center(
-                  child: Text(
-                    'Superficie 3',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 8),
-              Row(
+        body: ListView(
+          padding: const EdgeInsets.all(16.0),
+          children: [
+            // Primer Card
+            Card(
+              elevation: 4.0,
+              margin: const EdgeInsets.only(bottom: 16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Expanded(
-                    child: Container(
-                      height: 100,
-                      color: const Color.fromARGB(255, 142, 68, 173),
-                      child: const Center(
-                        child: Text(
-                          'Mitad Izquierda',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
+                  Container(
+                    height: 200, // Altura del contenedor dentro de la Card
+                    color: const Color.fromARGB(255, 197, 197, 197), // Color sólido en lugar de imagen
+                    width: double.infinity, // Ancho completo
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(16.0),
+                    child: const Text(
+                      'Título de la Card 1',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Container(
-                      height: 100,
-                      color: const Color.fromARGB(255, 155, 89, 182),
-                      child: const Center(
-                        child: Text(
-                          'Mitad Derecha',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // Acción cuando se presiona el botón
+                      },
+                      child: const Text('Ver más'),
                     ),
                   ),
                 ],
               ),
-            ],
-          ),
+            ),
+            // Segundo Card con dos filas de Cards
+            Row(
+              children: [
+                Expanded(
+                  child: Card(
+                    elevation: 4.0,
+                    margin: const EdgeInsets.only(right: 8.0, bottom: 16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Container(
+                          height: 150, // Altura del contenedor dentro de la Card
+                          color: const Color.fromARGB(255, 197, 197, 197), // Color sólido en lugar de imagen
+                          width: double.infinity, // Ancho completo dentro del Expanded
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(16.0),
+                          child: const Text(
+                            'Título de la Card 5',
+                            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: ElevatedButton(
+                            onPressed: () {
+                              // Acción cuando se presiona el botón
+                            },
+                            child: const Text('Ver más'),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Card(
+                    elevation: 4.0,
+                    margin: const EdgeInsets.only(left: 8.0, bottom: 16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Container(
+                          height: 150, // Altura del contenedor dentro de la Card
+                          color: const Color.fromARGB(255, 197, 197, 197), // Color sólido en lugar de imagen
+                          width: double.infinity, // Ancho completo dentro del Expanded
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(16.0),
+                          child: const Text(
+                            'Título de la Card 6',
+                            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: ElevatedButton(
+                            onPressed: () {
+                              // Acción cuando se presiona el botón
+                            },
+                            child: const Text('Ver más'),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
