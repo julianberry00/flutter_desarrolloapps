@@ -205,15 +205,13 @@ Container(
                 ),
               ),
 
-              Container(
-                margin: EdgeInsets.all(8.0),
-                height: 60.0,
-                width: double.infinity,
-                color: const Color.fromARGB(255, 228, 237, 252),
-                child: const Center(
-                  child: Text(
-                    'Subir Foto',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-    );
+
+
+            ],
+          ),
+        ),
+      ),
+
+      );
   }
 }
