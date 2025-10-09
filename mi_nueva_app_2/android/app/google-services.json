@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "55618223869",
+    "project_id": "appmovil25j",
+    "storage_bucket": "appmovil25j.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55618223869:android:e17781ff6e5566a6f88894",
+        "android_client_info": {
+          "package_name": "com.example.mi_nueva_app_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuuQpPJWWFcv7Na9iMJIxvvQlAbDrke0A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
